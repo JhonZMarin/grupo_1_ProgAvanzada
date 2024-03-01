@@ -15,12 +15,18 @@ img{
     display: grid;
     grid-template-columns: 75% 25%;
     grid-template-rows: 2fr 1fr 4fr 1fr;
-    grid-template-areas: "header header" "form menu" "body menu" "footer menu";
+    grid-template-areas: "header header"
+    "form menu" 
+    "body menu" 
+    "footer menu";
 }
 
 .page .headerContent{
     background-color: #808080;
     grid-area: header;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
     
 }
 
@@ -42,16 +48,49 @@ img{
 .page .bodyContent{
     background-color: #fff;
     grid-area: body;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 500px;
 }
 
+.page .bodyContent .tituloArticulos{
+    width: 100%;
+    text-align: center;
+}
+.producto{
+    width: 250px;
+    border: 1px solid #000;
+    border-radius: 16px;
+    margin: 16px;
+    padding: 8px;
+}
+
+.producto:hover{
+    border-color: #273c99 ;
+}
+
+.producto:hover .descripcion{
+    display: block;
+    border-color: #273c99 ;
+}
+
+
+.producto.descripcion{
+    display: none;
+}
 .page .footerContent{
     background-color: #4b4b4b;
     grid-area: footer;
 }
 .btn{
-    width: 100px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     position:fixed;
-    right:11px;
+    top: 0px;
+    left: 0px;
 }
+
