@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/forms.css">
 </head>
 <body>
     <button onclick="mostrarMsg()">Mensaje</button>
     <h1 id="tituloH1">Titulo</h1>
+    <form name="saludarForm">
+        <input id="nombreInp" type="text" name="nombreInp" placeholder="Ingrese su nombre"></input>
+        <label id="nombreError" class="error">Debe ingresar el nombre</label>
+        <label id="nombreLetrasError" class="error">Debe ingresar solo letras</label>
+        <button id="saludarBtn" type="button">Saludar</button>
+    </form>
+
+    <p><!--Mostrar saludo--></p>
     <script>
         //alert('Hola Mundo!!!')
         //<h1>dashdjsad</h1>
@@ -17,5 +26,6 @@
     </script>
     <script src="js/index.js"></script>
     <script src="js/array.js"></script>
+    <script src="js/forms.js"></script>
 </body>
 </html>
